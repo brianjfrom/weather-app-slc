@@ -1,0 +1,53 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Weather.gov weather</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <main>
+    <div class="mostRecent">
+      <h2>7 Day Weather Forecast  <span id="city"><br>Salt Lake City, </span><span id="state"> UT</span></h2>
+      <img id="weatherIcon" src="#" alt="Weather Icon">
+      <div class="weatherDay">
+        <h3><span id="weatherDay"></span></h3>
+        <h1><span class="weatherTemp"></span>°F</h1>
+      </div>
+      <div class="windweather">
+        <h3>Wind Direction: <span id="wind"></span></h3>
+        <h2><span id="windSpeed"></span></h2>
+      </div>
+      <div class="forcast">
+        <div class="currentForcast">
+          <h3>Weather Forecast: <span id="forcast"></span></h3>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="future_container">
+    <div class="future_forecast" future-forecast></div>
+    <template data-next-day-template>
+      <div class="next_cycle">
+        <p class="next_name" next-name></p>
+        <p class="temp_next">
+          <span temp-next></span>°F
+        </p>
+        <p class="forecast_next" forecast-next></p>
+        <img weather-icon src="" alt="">
+      </div>
+    </template>
+  </div>
+  <footer>
+    <a href="https://www.weather.gov/documentation/services-web-api">Weather.gov API</a>
+    <p>&copy; 2020</p>
+    <p>BF Web-design</p>
+  </footer>
+<script src="./script.js"></script> 
+</body>
+
+</html>
