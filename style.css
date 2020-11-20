@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+* a {
+  color: inherit;
+}
+* a:hover {
+  text-decoration: underline;
+}
+
+body {
+  color: whitesmoke;
+  text-shadow: 4px 2px 2px #a59696;
+  background: #f2e00f;
+  background: linear-gradient(155deg, #f2e00f 6%, #096079 65%, black 98%);
+}
+
+.mostRecent {
+  height: 45vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+.mostRecent h2 {
+  grid-column: 1/7;
+  font-size: 2.5em;
+  text-align: center;
+  padding: 1em 0;
+}
+.mostRecent #weatherIcon {
+  width: 10vw;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  justify-self: end;
+}
+.mostRecent .weatherDay h3 {
+  font-size: 1.8em;
+  padding-left: 1em;
+}
+.mostRecent .weatherDay h1 {
+  font-size: 4.5em;
+  padding-left: 1em;
+}
+.mostRecent .windweather {
+  grid-column: 4 / 5;
+}
+.mostRecent .forcast {
+  grid-row: 4/4;
+  grid-column: 2/5;
+  font-size: 2rem;
+}
+
+.future_container {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.future_forecast {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-column-gap: .5em;
+  padding: 1rem;
+}
+
+.next_cycle {
+  border: 1px solid #000;
+  text-align: center;
+  line-height: 1.5;
+  background-color: lightseagreen;
+}
+.next_cycle .next_name {
+  font-weight: bold;
+}
+.next_cycle:nth-child(1n) {
+  margin-bottom: 1em;
+}
+
+footer {
+  display: -webkit-box;
+  display: flex;
+  justify-content: space-around;
+  -webkit-box-align: center;
+          align-items: center;
+  height: 5vh;
+}
+
+@media screen and (max-width: 690px) {
+  body {
+    color: #000;
+    text-shadow: none;
+  }
+
+  footer {
+    color: #fff;
+  }
+
+  .mostRecent {
+    display: grid;
+    height: 90vh;
+  }
+  .mostRecent h2 {
+    font-size: 2rem;
+    align-self: center;
+    padding: 1em;
+  }
+  .mostRecent #city,
+  .mostRecent #state {
+    font-size: 1.5rem;
+  }
+  .mostRecent #weatherIcon {
+    width: 10vw;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  .mostRecent .weatherDay {
+    grid-column: 2 / 5;
+    -webkit-box-pack: center;
+            justify-content: center;
+  }
+  .mostRecent .weatherDay h1 {
+    font-size: 3.0rem;
+    justify-self: start;
+  }
+  .mostRecent .windweather {
+    grid-column: 1 / 7;
+    grid-row: 3 / 4;
+    justify-self: center;
+    align-self: center;
+  }
+  .mostRecent .forcast {
+    grid-column: 1 / 7;
+    padding: 0.5em;
+    font-size: 1.5rem;
+  }
+
+  .future_forecast {
+    display: block;
+  }
+}
+@media screen and (min-height: 750px) {
+  .mostRecent {
+    height: 60vh;
+  }
+}
